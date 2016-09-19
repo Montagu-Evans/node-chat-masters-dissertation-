@@ -1,0 +1,33 @@
+{
+  "name": "chat-application-exams",
+  "version": "1.0.0",
+  "description": "Master's Dissertation - Chat application for kids using Node.js, express.js and socket.io",
+  "main": "app.js",
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.0",
+    "csurf": "^1.8.3",
+    "client-sessions": "^0.7.0",
+    "jade": "^1.11.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "morgan": "^1.7.0",
+    "mongoose": "^4.4.6",
+    "nodemon": "^1.9.1",
+    "socket.io": "^1.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Montagu-Evans/node-chat-masters-dissertation-.git"
+  },
+  "author": "Philip Montagu-Evans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Montagu-Evans/node-chat-masters-dissertation-/issues"
+  },
+  "homepage": "https://github.com/Montagu-Evans/node-chat-masters-dissertation-#readme"
+}
