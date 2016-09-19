@@ -13,14 +13,14 @@ var port = process.env.PORT || 1338;
 var routes;
 
 app.use(morgan('dev'));
-app.use(express.static(__dirname + '/public'));
-app.use(express.static(__dirname + '/public/styles'));
-app.use(express.static(__dirname + '/public/scripts'));
-app.use(express.static(__dirname + '/public/images'));
+app.use(express.static(__dirname + '/../public'));
+app.use(express.static(__dirname + '/../public/styles'));
+app.use(express.static(__dirname + '/../public/scripts'));
+app.use(express.static(__dirname + '/../public/images'));
 
 app.set('view engine', 'ejs');
 app.set('view engine', 'jade');
-app.set('views', __dirname + '/public/views');
+app.set('views', __dirname + '/../public/views');
 //if you run jade, to prettify code when inspecting html use:
 app.locals.pretty = true;
 
@@ -36,7 +36,7 @@ app.use(sessions({
 }));
 
 app.use(csrf());
-routes = require('./public/routes/routing')(app);
+routes = require('./routes/routing')(app);
 
 var numUsers = 0;
 
@@ -61,6 +61,7 @@ io.on('connection', function (socket) {
     socket.emit('login', {
       numUsers: numUsers
     });
+    
     // echo globally (all clients) that a person has connected
     socket.broadcast.emit('user joined', {
       username: socket.username,

@@ -206,13 +206,12 @@ $(function() {
     }, regex = [];
 
     for(var emoticon in emoticons) {
-    //escape everything!
+
+    //escape everything - sir yes sir!
     regex.push("("+emoticon.replace(/([.?*+^$[\]\\(){}|-])/g, "\\$1")+")");
   }
 
   regex = new RegExp(regex.join("|"), "g");
-  // console.log(regex);
-
 
 
   message = message.replace(regex, function(captured) {
