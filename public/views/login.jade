@@ -1,0 +1,25 @@
+extends base
+
+title login
+
+block body
+		div(class='jumbotron text-center')
+			div(class='login container floating-background')
+				div(class='container background')
+				form(id='login-form' method='post')
+					ul(id="progressbar")
+						li
+							a(href='/register') Register - Step 1
+						li(class="active")
+							a(href='/login') Login - Step 2
+					fieldset
+						h2(class="fs-title") Login to your account
+						br
+						input(type='hidden',name='_csrf', value=csrfToken)
+						input(type='email', name='email', required=true,
+						placeholder='Email')
+						br
+						input(type='password', name='password', required=true,
+						placeholder='Password')
+						br
+						input(type='submit' class='action-button' id='btn-login' value='Login')

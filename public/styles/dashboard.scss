@@ -1,0 +1,270 @@
+@import url('http://fonts.googleapis.com/css?family=Montserrat');
+
+.zoomInLeft {
+	animation-delay: 0.6s;
+}
+
+* {
+	box-sizing: border-box; 
+}
+.display-none {
+	display: none;
+}
+
+.links {
+	color: white;
+}
+
+.avatar {
+	/* This image is 687 wide by 1024 tall, similar to your aspect ratio */
+	background-image: url('http://i.stack.imgur.com/8sNfT.png');
+	/* make a square container */
+	width: 150px;
+	height: 150px;
+	margin-left: 25px;
+	margin-top: 10px;
+	position:absolute;
+	/* fill the container, preserving aspect ratio, and cropping to fit */
+	background-size: cover;
+
+	/* center the image vertically and horizontally */
+	background-position: center;
+
+	/* round the edges to a circle with border radius 1/2 container size */
+	border-radius: 50%;
+	overflow:hidden;
+}
+
+// #plane {
+// 	height: 50px;
+// 	position:absolute;
+// 	top:50%;
+// 	left:50%;
+// }
+
+.avatar-hidden {
+	/* This image is 687 wide by 1024 tall, similar to your aspect ratio */
+	background: rgb(30, 190, 177) none repeat scroll 0% 0%;
+	opacity: .7;
+	/* make a square container */
+	width: 150px;
+	height: 150px;
+	margin-left: 25px;
+	margin-top: 10px;
+	position:absolute;
+	/* fill the container, preserving aspect ratio, and cropping to fit */
+	background-size: cover;
+
+	/* center the image vertically and horizontally */
+	background-position: center;
+
+	/* round the edges to a circle with border radius 1/2 container size */
+	border-radius: 50%;
+	overflow:hidden;
+}
+
+
+.left {
+  position:fixed; // keep fixed to window
+  padding: 100px;
+  top: 0; left: 0; // position to top left of window
+  height:100%; width:20px; //set dimensions
+  background: #F46F4D;
+  transition: width ease .5s; // fluid transition when resizing
+  
+  /* Sass/Scss only:
+    Using a selector (.open-nav) with an "&" afterward is actually selecting
+  any parent selector. For instance, this outputs "body.open-nav .left { ... }"
+  More info: http://thesassway.com/intermediate/referencing-parent-selectors-using-ampersand
+  */
+  body.open-nav & {
+  	width:250px; 
+  }
+  
+  ul {
+  	list-style:none;
+  	margin:0; padding:0;
+
+  	li {
+  		margin-bottom:25px;
+  		top: 0;
+  		left: 0;
+  	}
+  }
+}
+
+.name {
+	color: darken(#A0ADAF, 20%);
+	font-family: montserrat, arial, verdana;
+  // color: #A0ADAF;
+  font-size: 1.6rem;
+}
+
+.signout {
+	font-family: montserrat, arial, verdana;
+	color: lighten(#A0ADAF, 10%);
+	transition: color .30s ease-in-out;
+}
+
+.signout:hover {
+	color: #F46F4D;
+	text-decoration: none;
+}
+
+
+.right {
+	position:relative;
+  margin-left:75px; // push the right column past the left column, with some room as well.
+  transition:margin-left ease .5s; // fluid transition when resizing
+  
+  body.open-nav & {
+    margin-left:275px; // push the right column further when left is opened
+}
+}
+
+.this-green {
+	background-color: #7BBF6A;
+	transition: 0.8s ease-in;
+}
+
+.containerr {
+	position: absolute;
+	width: 500px;
+	height: 100px;
+	border-radius: 10px;
+	top: 50%;
+	left: 50%;
+	margin: -100px 0 0 -250px;
+	background-color: #FEFEFE;
+	// display: flex;
+	// /* flex-direction: column;*/
+	// align-items: center; 
+	// /* justify-content: center;*/
+}
+
+.top {
+	display: flex;
+	/* flex-direction: column;*/
+	align-items: center; 
+	/* justify-content: center;*/
+}
+
+.chat {
+	position: absolute;
+	width: 500px;
+	height: 40px;
+	border-radius: 10px 10px 0 0;
+	top: 50%;
+	left: 50%;
+	margin: -100px 0 0 -250px;
+	background-color: #7BBF6A;
+	color: white;
+	display: flex;
+	/* flex-direction: column;*/
+	align-items: center; 
+	/* justify-content: center;*/
+}
+
+.plus {
+	background-color: #009C30;
+	margin-left: 30px;
+}
+
+.plus-sign {
+	font-size: 2rem;
+}
+
+.wrapper {
+	position: absolute;
+	width: 500px;
+	height: 300px;
+	top: 50%;
+	left: 50%;
+	margin: -140px 0 0 -250px;
+}
+
+.messages {
+	position: absolute;
+	width: 500px;
+	height: 300px;
+	border-radius: 0 0 10px 10px;
+	top: 50%;
+	left: 50%;
+	margin: -60px 0 0 -250px;
+	background-color: #F0ECEC;
+
+}
+
+.wra {
+	position: absolute;
+	top: 25px;
+	left: 40px;
+}
+
+.send-messages {
+	text-align: center;
+	bottom: 0 !important;
+	position: absolute;
+	margin-bottom: 20px;
+}
+
+.message-input {
+	border-radius: 0px !important;
+	background-color: #D0CFCF;
+	border: none !important;
+	width: 80%;
+}
+
+.btn-send {
+	width: 15%;
+	margin-left: 20px;
+	background-color: lighten(#337ab7, 20%);
+	border: none !important;
+}
+
+.btn-send:hover, .btn-send:active, .btn-send:focus {
+	background-color: lighten(#337ab7, 20%);
+	border: none !important;
+}
+
+#content {
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+.inner-containerr {
+	font-family: montserrat, arial, verdana;
+	color: #A0ADAF;
+	font-size: 1.6rem;
+	padding-left: 30px;
+	padding-top: 20px;
+}
+
+.inner-containerr a {
+	font-family: montserrat, arial, verdana;
+	color: #333;
+}
+
+span.glyphicon {
+	font-size: 4rem;
+	transition: color .25s ease-in-out;
+	color: #F46F4D;
+	right: 40px;
+	top: 30px;
+	position: absolute;
+}
+
+span.glyphicon:hover {
+	color: #A7DDE9;
+}
+
+.margin {
+	margin-right: 15px;
+}
+
+.badge {
+	margin-top: -55px !important;
+	margin-left: -10px !important;
+	background-color: #F46F4D;
+}
+

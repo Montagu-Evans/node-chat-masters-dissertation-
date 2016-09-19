@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<link href='https://fonts.googleapis.com/css?family=Risque' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+
+	<title>Examensarbete | EC's Node.js Chat</title>
+
+	<!-- JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js" type="text/javascript"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="dashboard.js"></script> 
+	<script src="main.js"></script>
+	<script src="typed-script.js"></script>
+	<script src="validation.js"></script>
+<!-- 	<script src="chat.js"></script>  -->
+	
+	<!--CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class='left display-none'>
+		<div class='avatar display-none'></div>
+	</div>
+	<div class='containerr'>
+		<div class='wra'>
+			<p class='name'><%= user.firstName %> <%= user.lastName %></p>
+			<a href='#' class='signout'>Sign out</a>
+			<a href='#' id='das-envelope'><span  class='glyphicon glyphicon-envelope'></span></a>
+		</div>
+	</div>
+	<ul class='pages display-none'>
+		<li class="login page">
+			<div class="form">
+				<h3 class="title">What's your nickname?</h3>
+				<input class="usernameInput" type="text" maxlength="14" />
+			</div>
+		</li>
+		<ul class="pages display-none">	
+			<li id="sun"><img src='smilingSun.png'></li>
+			<li><div class="cloud large cloud-1">
+				<div></div><div></div><div></div><div></div>
+			</div>
+			<div class="cloud normal cloud-2">
+				<div></div><div></div><div></div><div></div>
+			</div>
+			<div class="cloud small cloud-3">
+				<div></div><div></div><div></div><div></div>
+			</div>
+			<div class="cloud tiny cloud-4">
+				<div></div><div></div><div></div><div></div>
+			</div>
+			<div class="cloud large cloud-5">
+				<div></div><div></div><div></div><div></div>
+			</div>
+			<div class="cloud normal cloud-6">
+				<div></div><div></div><div></div><div></div>
+			</div>
+			<div class="cloud small cloud-7">
+				<div></div><div></div><div></div><div></div>
+			</div>
+			<div class="cloud tiny cloud-8">
+				<div></div><div></div><div></div><div></div>
+			</div>
+			<div class="cloud small cloud-9">
+				<div></div><div></div><div></div><div></div>
+			</div>
+			<div class="cloud normal cloud-10">
+				<div></div><div></div><div></div><div></div>
+			</div>
+			<div class="cloud tiny cloud-11">
+				<div></div><div></div><div></div><div></div>
+			</div>
+			<div class="cloud small cloud-12">
+				<div></div><div></div><div></div><div></div>
+			</div></li>
+			<li class='green'><strong>Messages</strong></li>
+			<li class="chat page">
+				<div class="chatArea">
+					<ul class="messages"></ul>
+					<!-- <div class='element'></div> -->
+					<span class='username'></span>
+					<div class='input-wrapper'>
+						<span class='inline'>
+							<input class="inputMessage" placeholder="Enter your message.."/> 
+							<input type='submit' class='btn-send btn btn-primary' value='Send'>
+						</span>
+					</div>
+				</div>
+			</li>
+		</ul> 
+
+		<ul class='background-ul'>
+			<li id="balloon1"><img src='airballoon1.png'></li>
+			<li id="balloon2"><img src='airballoon2.png'></li>
+			<li id="hill"><img src='hill.png'></li>
+			<li id='computerboy'><img src='dude_laptop.png'></li>
+			<li id='bubble'><img src='thinkbubble.png'><a href='#' class='signout bubble-signout'></a></li>
+				<li id='bubble'><a href='/dashboard' class='profile display-none'>Profile</a></li>
+				<li id='bubble'><a href='/logout' class='signout-link display-none'>Sign out</a></li>
+				<li id='bubble'><a href='#' class='email-link display-none'>Email</a></li>
+			<li id='examen'><img src='examenshatt.png'></li>
+		</ul>
+	</body>
+	</html>

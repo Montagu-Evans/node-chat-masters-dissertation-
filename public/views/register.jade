@@ -1,0 +1,31 @@
+extends base
+
+title register
+
+block body
+	div(class='jumbotron text-center')
+		span(class='element')
+		div(class='login display-none container floating-background')
+			div(class='container background')
+			form(id='register-form' method='post')
+				ul(id="progressbar")
+					li(class="active") 
+						a(href='/register') Register - Step 1
+					li 
+						a(href='/login') Login - Step 2
+				fieldset
+					h2(class="fs-title") Register an account
+					span(id='error' class='display-none') all fields are required
+					#{error}
+					input(type='hidden' name='_csrf' value=csrfToken)
+					input(type='text' id='firstName' name='firstName' required=true minlength='2' placeholder='Firstname' autofocus="autofocus")
+					br
+					input(type='text' id='lastName' name='lastName' required=true minlength='2' placeholder='Lastname')
+					br
+					input(type='email' id='email' name='email' required=true placeholder='Email')
+					br
+					input(type='password' id='password' name='password' required=true placeholder='Password')
+					br
+					input(type='submit' class='action-button' id='btn-register' value='Continue')
+		script(type='text/javascript')
+			$('#register-form').validate();

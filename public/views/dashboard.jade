@@ -1,0 +1,57 @@
+extends base
+
+title dashboard
+
+block body
+	//
+		img(id="plane" src='http://i.imgur.com/WmhK6mX.png' border='0' style='background-color: transparent')
+	
+	ul.pages
+		li.login.page
+			.form
+				h3.title What's your nickname?
+				input.usernameInput(type='text', maxlength='14')
+		ul.pages
+			li#sun
+				img(src='smilingSun.png')
+			li#cloud
+				img(src='cloud.png')
+			li#cloud2
+				img(src='cloud2.png')
+			li#cloud3
+				img(src='cloud3.png')
+			li#cloud4
+				img(src='cloud4.png')
+			li#cloud5
+				img(src='cloud4.png')
+			li#cloud6
+				img(src='cloud4.png')
+			li#cloud7
+				img(src='cloud4.png')
+			li#cloud8
+				img(src='cloud4.png')
+			li#cloud9
+				img(src='cloud4.png')
+			li#cloud10
+				img(src='cloud4.png')
+			li.green
+				strong Messages
+			li.chat.page
+				div(class='chatArea')
+					ul.messages
+					span.username
+					.input-wrapper
+						span.inline
+							input.inputMessage(placeholder='Enter your message..')
+							input.btn-send.btn.btn-primary(type='submit', value='Send')
+	ul
+		li#balloon1
+			img(src='airballoon1.png')
+		li#balloon2
+			img(src='airballoon2.png')
+		li#hill
+			img(src='hill.png')
+		li#computerboy
+			img(src='dude_laptop.png')
+		li#bubble
+			img(src='thinkbubble.png')
