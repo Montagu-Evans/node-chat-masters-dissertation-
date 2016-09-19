@@ -1,4 +1,4 @@
-My dissertation aimed at tackling a technology called Node.js and the goal was to build a chat application for children. The duration of this project was one month with no prior knowledge of the subject.
+My thesis aimed at tackling a technology called Node.js and the goal was to build a chat application for children. The duration of this project was one (1) month with no prior knowledge of the subject.
 
 
 *********************************** GET STARTED ***********************************

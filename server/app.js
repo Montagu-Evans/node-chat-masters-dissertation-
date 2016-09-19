@@ -13,14 +13,14 @@ var port = process.env.PORT || 1338;
 var routes;
 
 app.use(morgan('dev'));
-app.use(express.static(__dirname + '/../public'));
-app.use(express.static(__dirname + '/../public/styles'));
-app.use(express.static(__dirname + '/../public/scripts'));
-app.use(express.static(__dirname + '/../public/images'));
+app.use(express.static(__dirname + '/../client'));
+app.use(express.static(__dirname + '/../client/styles'));
+app.use(express.static(__dirname + '/../client/scripts'));
+app.use(express.static(__dirname + '/../client/images'));
 
 app.set('view engine', 'ejs');
 app.set('view engine', 'jade');
-app.set('views', __dirname + '/../public/views');
+app.set('views', __dirname + '/../client/views');
 //if you run jade, to prettify code when inspecting html use:
 app.locals.pretty = true;
 
